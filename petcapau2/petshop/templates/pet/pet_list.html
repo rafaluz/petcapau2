@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Listar pets {% endblock %}
+
+{% block content %}
+      
+
+{% for pet in pets %}
+    <p>Nome: {{ pet.name }}</p>
+    <p>Espécie: {{ pet.species }}</p>
+    <p>Raça: {{ pet.breed }}</p>
+    <a href="{% url 'petshop:pet_detail' pet.pk  %}"> Detalhes do Pet </a>
+    <hr>
+{% endfor %}
+
+
+{% endblock content %}
+
+
+

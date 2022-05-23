@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Detalhes do pet {% endblock %}
+
+{% block content %}
+
+    <p>Nome: {{ pet.name }}</p>
+    <p>Espécie: {{ pet.species }}</p>
+    <p>Raça: {{ pet.breed }}</p>
+    <p>Sexo: {{ pet.sex }}</p>
+    <p>Data de Nascimento: {{ pet.birth_date }}</p>
+    <p>Pelagem: {{ pet.hair }}</p>
+    <p>Identificação ou Tatuagem: {{ pet.tatoo }}</p>
+    <hr>
+
+{% endblock %}

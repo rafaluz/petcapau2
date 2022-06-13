@@ -4,12 +4,15 @@
 
 {% block content %}
       
+<a href="{% url 'petshop:pet_create' %}">Criar novo pet</a>
 
-{% for pet in pets %}
+{% for pet in object_list %}
     <p>Nome: {{ pet.name }}</p>
     <p>Espécie: {{ pet.species }}</p>
     <p>Raça: {{ pet.breed }}</p>
-    <a href="{% url 'petshop:pet_detail' pet.pk  %}"> Detalhes do Pet </a>
+    <a href="{% url 'petshop:pet_detail' pet.pk %}"> Detalhes</a>
+    <a href="{% url 'petshop:pet_update' pet.pk %}"> Atualizar </a>
+    <a href="{% url 'petshop:pet_delete' pet.pk %}">Remover</a>
     <hr>
 {% endfor %}
 
